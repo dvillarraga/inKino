@@ -4,6 +4,8 @@ set -o errexit
 set -o pipefail
 set -o nounset
 
+echo "building flutter apk..."
+
 (cd mobile && flutter build apk && flutter build ios)
 
 (cd mobile/android && fastlane internal)
